@@ -1,0 +1,9 @@
+def maxCount(m: int, n: int, ops: List[List[int]]) -> int:
+    row_max = m
+    col_max = n
+    
+    for op in ops:
+        row_max = min(row_max, op[0])
+        col_max = min(col_max, op[1])
+    
+    return row_max * col_max
